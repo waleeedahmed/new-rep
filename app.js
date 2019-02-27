@@ -12,6 +12,7 @@ var budgetController = (function() {
         this.percentage = -1;
     };
     
+    // to calculate the percentages of expenses 
     Expense.prototype.calcPercentage = function(totalIncome) {
             
         if (totalIncome > 0) {
@@ -21,6 +22,7 @@ var budgetController = (function() {
         }
     };
     
+    // to retrieve percentages
     Expense.prototype.getPercentage = function() {
         return this.percentage;     
     };
@@ -289,6 +291,8 @@ var UIController = (function() {
             if (type === 'exp')  {expCount -= 1;}
             var incTitle =  DOMStrings.icomeTitle;
             var exTitle = DOMStrings.expTitle;
+
+            // another edit to display the number of incomes and expenses
             document.querySelector(incTitle).innerHTML = `INCOME (${incCount})`;
             document.querySelector(exTitle).innerHTML = `EXPENSES (${expCount})`;
             
@@ -483,6 +487,8 @@ var controller = (function(budgetCtrl, UICtrl) {
         } 
     };
 
+    // first code to run when the app begins
+    // resets all values in the data structure  
     return {
         init: function()  {
             console.log('App has started.');
@@ -500,7 +506,7 @@ var controller = (function(budgetCtrl, UICtrl) {
 })(budgetController, UIController);
 
 
-
+// initiate application
 controller.init();
 
 
