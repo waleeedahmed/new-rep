@@ -1,5 +1,7 @@
 // BUDGET CONTROLLER
 
+
+
 var budgetController = (function() {
     
     // function constructor
@@ -43,7 +45,7 @@ var budgetController = (function() {
         
     }; 
     
-    // Data Structure
+    // Data Structure where all values go in 
     var data = {
         allItems: {
             exp: [],
@@ -271,6 +273,7 @@ var UIController = (function() {
             document.querySelector(incTitle).innerHTML = `INCOME (${incCount})`;
             document.querySelector(exTitle).innerHTML = `EXPENSES (${expCount})`;
 
+            // recent edit to reflect changes on calculating the average income and expenses
             document.querySelector(DOMStrings.tipTitle).innerHTML = `Income Average =  ${isNaN(incAvg) ? '0' : incAvg} | 
                                                                      Expense Average = ${isNaN(expAvg) ? '0' : expAvg}`;
 
