@@ -7,4 +7,6 @@ This was a very crucial course where I got to learn a lot about how Javascript w
 promises and asynchronous JS, 
 I also learnt modern JS project setups like NPM, babel and webpack. 
 
+(Please zoom in to see the animation below)
+
 ![](js.gif)
